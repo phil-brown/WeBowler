@@ -21,3 +21,29 @@ function calculateScore(ballsThrown) {
 
     return score;
 }
+
+var ballsThrown = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var roll = 0;
+
+function getScoreForRolls(roll1, roll2, roll3) {
+    roll++;
+    ballsThrown[roll] = roll1;
+    roll++;
+    if (roll2) {
+        ballsThrown[roll] = roll2;
+    }
+    else
+        ballsThrown[roll] = 0;
+    if (roll3) {
+        roll++;
+        ballsThrown[roll] = roll3;
+    }
+
+    return calculateScore(ballsThrown);
+}
+
+function updateScoreUI( roll1, roll2, roll3 ) {
+    var score = getScoreForRolls(roll1, roll2, roll3);
+
+    document.getElementById("score").innerHTML = "Score=" + score;
+}

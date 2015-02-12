@@ -1,6 +1,6 @@
 var expect = chai.expect;
 
-describe('MainTest', function () {
+describe('Scoring', function () {
 
     it('calculate Score for Scratch game', function () {
         var ballsThrown = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
@@ -56,5 +56,14 @@ describe('MainTest', function () {
     });
     */
 
+
+});
+
+describe('Gameplay', function () {
+
+    it('Scoring frame adds correctly', function () {
+        var result = getScoreForRolls(3, 6);
+        expect(result).to.equal(9);
+    });
 
 });
