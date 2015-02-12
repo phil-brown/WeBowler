@@ -21,12 +21,3 @@ function calculateScore(ballsThrown) {
 
     return score;
 }
-
-/*function sayHello (customName) {
-    if (customName) {
-        return 'hello, ' + customName;
-    }
-    else
-        return 'hello, world';
-}
-*/
